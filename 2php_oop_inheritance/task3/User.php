@@ -8,9 +8,9 @@ class User {
 
 
 	function login($usrn, $psw, $role){
-	if ($usrn == 'user' || $usrn == 'admin') {
-		if ($psw == 'userpsw' || $psw == 'adpsw') {
-		 	if ($role == 'plain user') {
+	if ($usrn == 'user') {
+		if ($psw == 'user') {
+		 	if ($role == 'plain') {
 		 		header('Location: user_view.php');
 		 	}
 		 	elseif ($role == 'admin'){
@@ -20,6 +20,7 @@ class User {
 	} else {
 		echo "Wrong username/password";
 	}
+	
 
 }//func end
 
